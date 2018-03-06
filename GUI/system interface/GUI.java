@@ -6,34 +6,35 @@ import java.awt.SystemColor;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
-import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import java.text.DateFormat;
 import java.awt.Color;
-import java.util.Locale;
-import java.time.LocalDateTime;
-import java.time.Month;
-import javax.swing.DropMode;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+
+
 
 public class GUI {
 
 	private JFrame frame;
 	private JTextField budget;
 	private JTextField e_day;
+	private JTextField s_day;
 	private JTextField lose;
 	private JTextField win;
 	private String stockname = "";
 	private int s_m = 0;
 	private int e_m = 0;
 	private JButton sendmessage = new JButton("送出");
+	public int stockcode = 0;
+	public ImageIcon img = new ImageIcon();
+	public JLabel lb = new JLabel();
 	/**
 	 * Launch the application.
 	 */
@@ -51,24 +52,11 @@ public class GUI {
 	}
 	
 	/**
-	 * 判斷是否為數字 
-	 */
-	public static boolean isNumeric(String str)
-	{  
-		if(str.equals(""))
-			return false;
-		for (int i = str.length();--i>=0;)
-		{    
-			if (!Character.isDigit(str.charAt(i)))
-				return false;
-		}  
-		return true;  
-	}  
-	
-	/**
 	 * Create the application.
 	 */
 	public GUI() {
+		TimeWork work = new TimeWork();
+		work.Work();
 		initialize();
 	}
 
@@ -77,12 +65,16 @@ public class GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setTitle("投資秘書");
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+						
+		lb.setBounds(480, 80, 800, 550);
+		lb.setVisible(true);
+		frame.getContentPane().add(lb);
 				
-		
 		JTextArea textArea = new JTextArea();
 		textArea.setForeground(Color.BLACK);
 		textArea.setFont(new Font("Monospaced", Font.PLAIN, 15));
@@ -109,7 +101,7 @@ public class GUI {
 		frame.getContentPane().add(textArea_2);
 		
 		budget = new JTextField();
-		budget.setHorizontalAlignment(SwingConstants.TRAILING);
+		budget.setHorizontalAlignment(SwingConstants.CENTER);
 		budget.setBounds(140, 42, 110, 25);
 		frame.getContentPane().add(budget);
 		budget.setColumns(10);
@@ -131,6 +123,8 @@ public class GUI {
 		frame.getContentPane().add(textArea_7);
 		
 		e_day = new JTextField();
+		e_day.setHorizontalAlignment(SwingConstants.CENTER);
+		e_day.setFont(new Font("Monospaced", Font.PLAIN, 15));
 		e_day.setColumns(10);
 		e_day.setBounds(282, 131, 25, 25);
 		frame.getContentPane().add(e_day);
@@ -152,7 +146,7 @@ public class GUI {
 		frame.getContentPane().add(textArea_9);
 		
 		lose = new JTextField();
-		lose.setHorizontalAlignment(SwingConstants.TRAILING);
+		lose.setHorizontalAlignment(SwingConstants.CENTER);
 		lose.setColumns(10);
 		lose.setBounds(140, 178, 50, 25);
 		frame.getContentPane().add(lose);
@@ -166,7 +160,7 @@ public class GUI {
 		frame.getContentPane().add(textArea_10);
 		
 		win = new JTextField();
-		win.setHorizontalAlignment(SwingConstants.TRAILING);
+		win.setHorizontalAlignment(SwingConstants.CENTER);
 		win.setColumns(10);
 		win.setBounds(140, 228, 50, 25);
 		frame.getContentPane().add(win);
@@ -243,6 +237,7 @@ public class GUI {
 			{
 				choose_stock.setText("中鋼");
 				stockname = "中鋼";
+				stockcode = 2002;
 			}
 		});
 		stock1.setFont(new Font("Monospaced", Font.PLAIN, 15));
@@ -256,6 +251,7 @@ public class GUI {
 			{
 				choose_stock.setText("宏達");
 				stockname = "宏達";
+				stockcode = 2498;
 			}
 		});
 		stock2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -269,6 +265,7 @@ public class GUI {
 			{
 				choose_stock.setText("鴻海");
 				stockname = "鴻海";
+				stockcode = 2317;
 			}
 		});
 		stock3.setHorizontalAlignment(SwingConstants.CENTER);
@@ -306,12 +303,6 @@ public class GUI {
 		s_year.setEditable(false);
 		s_year.setBounds(168, 88, 45, 25);
 		frame.getContentPane().add(s_year);
-		
-		JTextArea s_day = new JTextArea();
-		s_day.setFont(new Font("Monospaced", Font.PLAIN, 15));
-		s_day.setEditable(false);
-		s_day.setBounds(282, 88, 25, 25);
-		frame.getContentPane().add(s_day);
 		
 		JTextArea textArea_13 = new JTextArea();
 		textArea_13.setText("(10萬~1000萬)");
@@ -474,7 +465,19 @@ public class GUI {
 		error_end.setBounds(340, 134, 100, 25);
 		frame.getContentPane().add(error_end);
 		
+		s_day = new JTextField();
+		s_day.setHorizontalAlignment(SwingConstants.CENTER);
+		s_day.setFont(new Font("Monospaced", Font.PLAIN, 15));
+		s_day.setColumns(10);
+		s_day.setBounds(282, 88, 25, 25);
+		frame.getContentPane().add(s_day);
 		
+		JTextArea na = new JTextArea();
+		na.setFont(new Font("Monospaced", Font.PLAIN, 25));
+		na.setEditable(false);
+		na.setBackground(SystemColor.menu);
+		na.setBounds(480, 40, 180, 40);
+		frame.getContentPane().add(na);
 		
 		/////////////////////////////////////////////////////////
 		/*
@@ -503,138 +506,67 @@ public class GUI {
 		sendmessage.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent arg0) {
 				
-				Boolean flag = true;
-				Boolean flagBudget = true;
-				Boolean flagWin = true;
-				Boolean flagLose = true;
-				Boolean flagStock = true;
-				Boolean flagStart = true;
-				Boolean flagEnd = true;
-				String budget_input = budget.getText();
-				String lose_input = lose.getText();
-				String win_input = win.getText();
+				PreventBaga baga = new PreventBaga(budget.getText(), s_m, e_m, s_day.getText(), e_day.getText(), win.getText(), lose.getText(), stockname);
 				
-				/**
-				 * 預算防呆
-				 */
-				if(!isNumeric(budget_input))
-				{
-					flag = false;
-					flagBudget = false;
-				}
+				if(!baga.IsCorrectBudget(baga.getINPUT()[0]))
+					error_budget.setText("無效的金額");
 				else
-				{
-					int bud_in = Integer.parseInt(budget_input);
-					if(bud_in < 100000 || bud_in > 10000000)
-					{	
-						flag = false;
-						flagBudget = false;
-					}	
-				}		
-				if(!flagBudget)
-					error_budget.setText("無效的金額");	
+					error_budget.setText("");	
+				
+				if(!baga.IsCorrectStartMonthOrDay(baga.getINPUT()[3]))
+					error_start.setText("無效的日期");
 				else
-					error_budget.setText("");
-				/**
-				 * 停利防呆
-				 */
-				if(!isNumeric(win_input))
-				{
-					flag = false;
-					flagWin = false;
-				}
+					error_start.setText("");
+				
+				if(!baga.IsCorrectEndMonthOrDay(baga.getINPUT()[4]))
+					error_end.setText("無效的日期");
 				else
-				{
-					int win_in = Integer.parseInt(win_input);
-					if(win_in < 0 || win_in > 100)
-					{
-						flag = false;
-						flagWin = false;
-					}
-				}
-				if(!flagWin)
+					error_end.setText("");
+				
+				if(!baga.IsCorrectStopWin(baga.getINPUT()[5]))
 					error_win.setText("無效的停利率");	
 				else
 					error_win.setText("");
-				/**
-				 * 停損防呆
-				 */
-				if(!isNumeric(lose_input))
-				{
-					flag = false;
-					flagLose = false;
-				}
-				else
-				{
-					int lose_in = Integer.parseInt(lose_input);
-					if(lose_in < 0 || lose_in > 100)
-					{
-						flag = false;
-						flagLose = false;
-					}
-				}
-				if(!flagLose)
-					error_lose.setText("無效的停損率");
+				
+				if(!baga.IsCorrectStopLose(baga.getINPUT()[6]))
+					error_lose.setText("無效的停損率");	
 				else
 					error_lose.setText("");
-				/**
-				 * 股票防呆
-				 */
+				
 				if(stockname.equals(""))
-				{
-					flag = false;
-					flagStock = false;
-				}
-				if(!flagStock)
 					error_stock.setText("請選擇股票");
 				else
 					error_stock.setText("");
-				/**
-				 * 起始日期防呆
-				 */
-				if(s_m == 0)
-				{
-					flag = false;
-					flagStart = false;
-				}
-
-				if(!flagStart)
-					error_start.setText("請選擇日期");
-				else
-					error_start.setText("");
-				/**
-				 * 終止日期防呆
-				 */
-				if(e_m == 0 || e_m < s_m)
-				{
-					flag = false;
-					flagEnd = false;
-				}	
-				if(!flagEnd)
-				{
-					if(e_m < s_m)
-						error_end.setText("小於起始日期");
-					else
-						error_end.setText("請選擇日期");
-				}
-				else
-					error_end.setText("");
 				
 				/**
 				 * 文字設置
 				 */
-				if(flag)
+				if(baga.Test())
 				{			
 					test.setText("");
-					test.append("預算為 : " + budget_input + "\n");
-					test.append("投資起始日期為 : " + y + "年" + s_m + "月" + "日\n");
-					test.append("投資終止日期為 : " + y + "年" + e_m + "月" + "日\n");
-					test.append("停損比率為 : " + lose_input + " %\n");
-					test.append("停利比率為 : " + win_input + " %\n");
+					test.append("預算為 : " + budget.getText() + "\n");
+					test.append("投資起始日期為 : " + y + "年" + s_m + "月" + s_day.getText() + "日\n");
+					test.append("投資終止日期為 : " + y + "年" + e_m + "月" + e_day.getText() + "日\n");
+					test.append("停損比率為 : " + lose.getText() + " %\n");
+					test.append("停利比率為 : " + win.getText() + " %\n");
 					test.append("股票為 : " + stockname + "\n");
+					
+					frame.setBounds(100, 100, 1300, 700);
+					
+					/**
+					 * 產生走勢圖 
+					 */
+					//ImageIcon img = new ImageIcon(Integer.toString(stockcode)+".jpg");
+					img = new ImageIcon(Integer.toString(stockcode)+".jpg");
+					img.setImage(img.getImage().getScaledInstance(800,550,Image.SCALE_DEFAULT));
+					lb.setIcon(img);
+					
+					na.setText(stockname + "股票走勢圖");
+										
 				}
 				else
 					test.setText("");
+							
 			}
 		});
 	}
