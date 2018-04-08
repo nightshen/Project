@@ -15,12 +15,23 @@ public class DownloadPicture {
 	    {        
 	        String[] pic = {"https://stock.wearn.com/finance_chart.asp?stockid=2317&timekind=0&timeblock=90&sma1=&sma2=&sma3=&volume=0&indicator1=SStoch&indicator2=MACD&indicator3=Vol.jpg",    
 	                        "https://stock.wearn.com/finance_chart.asp?stockid=2498&timekind=0&timeblock=90&sma1=&sma2=&sma3=&volume=0&indicator1=SStoch&indicator2=MACD&indicator3=Vol.jpg",    
-	                        "https://stock.wearn.com/finance_chart.asp?stockid=2002&timekind=0&timeblock=90&sma1=&sma2=&sma3=&volume=0&indicator1=SStoch&indicator2=MACD&indicator3=Vol.jpg"};
+	                        "https://stock.wearn.com/finance_chart.asp?stockid=2002&timekind=0&timeblock=90&sma1=&sma2=&sma3=&volume=0&indicator1=SStoch&indicator2=MACD&indicator3=Vol.jpg",
+	                        "https://stock.capital.com.tw/rtgif/gifstkchartasp2.djgif?w=312&h=214&id=2002&xyz=232212",
+	                        "https://stock.capital.com.tw/rtgif/gifstkchartasp2.djgif?w=312&h=214&id=2317&xyz=232206",
+	                        "https://stock.capital.com.tw/rtgif/gifstkchartasp2.djgif?w=312&h=214&id=2498&xyz=231118"};
 
 	        for (int k=0; k< pic.length ; k++)
 	        {
-	            ss = pic[k].substring(pic[k].length() - 108, pic[k].length() - 104);
-	            ss += ".jpg";
+	            if(k < 3)
+	            {
+	            	ss = pic[k].substring(pic[k].length() - 108, pic[k].length() - 104);
+	            	ss += "_a.jpg";
+	            }
+	            else
+	            {
+	            	ss = pic[k].substring(pic[k].length() - 15, pic[k].length() - 11);
+		            ss += "_b.jpg";
+	            }
 	            
 	        	url = new URL(pic[k]);
 	            FileOutputStream fos = new FileOutputStream(ss, false);

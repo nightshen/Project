@@ -7,9 +7,6 @@ public class TimeWork extends TimerTask{
 	{
 		DownloadPicture dp = new DownloadPicture();
 		dp.Download();
-		System.out.println("Download!");
-		
-		
 		
 	}
 
@@ -17,6 +14,6 @@ public class TimeWork extends TimerTask{
 	{	
 		TimeWork tw = new TimeWork();
 		Timer timer = new Timer();
-		timer.schedule(tw, 1000, 10000);
+		timer.schedule(tw, 1000, 60000);
 	}
 }

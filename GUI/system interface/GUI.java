@@ -9,6 +9,7 @@ import java.awt.Font;
 import javax.swing.JMenu;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.Calendar;
 import java.awt.event.ActionEvent;
 import javax.swing.JMenuBar;
@@ -34,7 +35,7 @@ public class GUI {
 	private JButton sendmessage = new JButton("送出");
 	public int stockcode = 0;
 	public ImageIcon img = new ImageIcon();
-	public JLabel lb = new JLabel();
+	public ImageIcon img2 = new ImageIcon();
 	/**
 	 * Launch the application.
 	 */
@@ -53,11 +54,14 @@ public class GUI {
 	
 	/**
 	 * Create the application.
+	 * @throws IOException 
 	 */
-	public GUI() {
+	public GUI() throws IOException {
 		TimeWork work = new TimeWork();
 		work.Work();
 		initialize();
+		UpdateStockData up = new UpdateStockData();
+		up.DownloadStockData();
 	}
 
 	/**
@@ -67,14 +71,20 @@ public class GUI {
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setTitle("投資秘書");
-		frame.setBounds(100, 100, 500, 600);
+		frame.setBounds(100, 100, 500, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-						
+				
+		JLabel lb = new JLabel();
 		lb.setBounds(480, 80, 800, 550);
 		lb.setVisible(true);
 		frame.getContentPane().add(lb);
 				
+		JLabel lb2 = new JLabel();
+		lb2.setBounds(10, 365, 300, 250);
+		lb2.setVisible(true);
+		frame.getContentPane().add(lb2);
+		
 		JTextArea textArea = new JTextArea();
 		textArea.setForeground(Color.BLACK);
 		textArea.setFont(new Font("Monospaced", Font.PLAIN, 15));
@@ -165,10 +175,10 @@ public class GUI {
 		win.setBounds(140, 228, 50, 25);
 		frame.getContentPane().add(win);
 		
-		JTextArea test = new JTextArea();
+		/*JTextArea test = new JTextArea();
 		test.setEditable(false);
 		test.setBounds(10, 347, 240, 188);
-		frame.getContentPane().add(test);
+		frame.getContentPane().add(test);*/
 		
 		JTextArea error_budget = new JTextArea();
 		error_budget.setEditable(false);
@@ -195,7 +205,7 @@ public class GUI {
 		
 		frame.getContentPane().add(error_win);
 		sendmessage.setFont(new Font("Monospaced", Font.PLAIN, 15));
-		sendmessage.setBounds(325, 487, 149, 48);
+		sendmessage.setBounds(340, 267, 120, 40);
 		frame.getContentPane().add(sendmessage);
 		
 		JTextArea textArea_11 = new JTextArea();
@@ -479,6 +489,13 @@ public class GUI {
 		na.setBounds(480, 40, 180, 40);
 		frame.getContentPane().add(na);
 		
+		JTextArea na2 = new JTextArea();
+		na2.setFont(new Font("Monospaced", Font.PLAIN, 25));
+		na2.setEditable(false);
+		na2.setBackground(SystemColor.menu);
+		na2.setBounds(10, 320, 180, 40);
+		frame.getContentPane().add(na2);
+		
 		/////////////////////////////////////////////////////////
 		/*
 								顯示時間
@@ -543,13 +560,13 @@ public class GUI {
 				 */
 				if(baga.Test())
 				{			
-					test.setText("");
+					/*test.setText("");
 					test.append("預算為 : " + budget.getText() + "\n");
 					test.append("投資起始日期為 : " + y + "年" + s_m + "月" + s_day.getText() + "日\n");
 					test.append("投資終止日期為 : " + y + "年" + e_m + "月" + e_day.getText() + "日\n");
 					test.append("停損比率為 : " + lose.getText() + " %\n");
 					test.append("停利比率為 : " + win.getText() + " %\n");
-					test.append("股票為 : " + stockname + "\n");
+					test.append("股票為 : " + stockname + "\n");*/
 					
 					frame.setBounds(100, 100, 1300, 700);
 					
@@ -557,15 +574,21 @@ public class GUI {
 					 * 產生走勢圖 
 					 */
 					//ImageIcon img = new ImageIcon(Integer.toString(stockcode)+".jpg");
-					img = new ImageIcon(Integer.toString(stockcode)+".jpg");
+					img = new ImageIcon(Integer.toString(stockcode)+"_a.jpg");
 					img.setImage(img.getImage().getScaledInstance(800,550,Image.SCALE_DEFAULT));
 					lb.setIcon(img);
 					
-					na.setText(stockname + "股票走勢圖");
+					img2 = new ImageIcon(Integer.toString(stockcode)+"_b.jpg");
+					img2.setImage(img2.getImage().getScaledInstance(300,250,Image.SCALE_DEFAULT));
+					lb2.setIcon(img2);
+					
+					na.setText(stockname + "技術分析圖");
+					na2.setText(stockname + "即時走勢圖");
 										
 				}
 				else
-					test.setText("");
+					//test.setText("");
+					;
 							
 			}
 		});
