@@ -9,11 +9,14 @@ import java.util.Calendar;
 public class UpdateStockData {
 
 	String file_path = "C:\\Users\\佳昇\\Desktop\\GUI\\system interface\\stock\\";
-	int[] stockNumber = {2002, 2317, 2498};
-	int[] oldYear = {0, 0, 0};
-	int[] oldMonth = {0, 0, 0};
-	int[] oldDate = {0, 0, 0};
-	int[] NowDate = {0, 0, 0};
+	//int[] stockNumber = {2002, 2317, 2498, 2332, 2376, 2412, 2448, 2329};
+	int[] stockNumber = {2303, 2330, 2352, 2377, 2412, 2454, 2456, 2492};
+	int[] oldYear = {0, 0, 0, 0, 0, 0, 0, 0};
+	int[] oldMonth = {0, 0, 0, 0, 0, 0, 0, 0};
+	int[] oldDate = {1, 1, 1, 1, 1, 1, 1, 1};
+	int[] NowDate = {1, 1, 1, 1, 1, 1, 1, 1};
+	int[] NowMonth = {1, 1, 1, 1, 1, 1, 1, 1};
+	int[] NowYear = {2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003};
 	
 	public void DownloadStockData() throws IOException
 	    {	
@@ -29,24 +32,28 @@ public class UpdateStockData {
 	            String first, last, url;
 	        	first = "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=html&date=";
 	        	last = "01&stockNo=";
-	            try {
+	            File file = new File(path); 
+	        	if(!file.exists())
+	        		Init();
+	        	try {
 	            	int D = 0;
 	            	int MONTH = oldMonth[h];
 	            	FileWriter fw = new FileWriter(path,true);
-	    	    	for(oldYear[h] = oldYear[h]; oldYear[h] <= nowYear; oldYear[h]++)
+	    	    	for(int year = oldYear[h]; year <= nowYear; year++)
 	    	    	{    	    		
-	    	    		for(oldMonth[h] = oldMonth[h]; oldMonth[h] <= 12; oldMonth[h]++)
+	    	    		for(int mon = oldMonth[h]; mon <= 12; mon++)
 	    	    		{
 	    	    			int temp;
-	    	    			if(oldYear[h] == nowYear && oldMonth[h] > nowMonth)
-	    	    				break;
 	    	    				
-	    	    			if(oldMonth[h] < 10)
-	    	    				temp = oldYear[h] * 10;
-	    	    			else
-	    	    				temp = oldYear[h];
+	    	    			if(year == nowYear && mon > nowMonth)
+	    	    				break;
 	    	    			
-	    	    			url = first + Integer.toString(temp) + Integer.toString(oldMonth[h]) + last + Integer.toString(stockNumber[h]);
+	    	    			if(mon < 10)
+	    	    				temp = year * 10;
+	    	    			else
+	    	    				temp = year;
+	    	    			
+	    	    			url = first + Integer.toString(temp) + Integer.toString(mon) + last + Integer.toString(stockNumber[h]);
 	    	    			
 	    	    			Document doc = Jsoup.connect(url).get();
 	    					Elements link = doc.select("tbody");
@@ -69,6 +76,8 @@ public class UpdateStockData {
 	        		        		D = Integer.parseInt(k[2]);		        		
 	        		        		j += 1911;
 	        		        		str[i] = Integer.toString(j) + "/" + k[1] + "/" +k[2];
+	        		        		NowMonth[h] = M;
+	        		        		NowYear[h] = j;
 	        		        	}
 	        	        		
 	    		        		if(M == MONTH)
@@ -95,12 +104,14 @@ public class UpdateStockData {
 	    		        		}
 	        	        		   	        				        		
 	    	        		}
-	    	        		fw.flush();
+	    	        		fw.flush();    	        		
+	    	        		
+	    	        		
 	    	        		
 	    	        		NowDate[h] = D;
 	    	        		setTime();
 	    	        		
-	    	        		if(oldMonth[h] == nowMonth)
+	    	        		if(mon == 12)
 	    	        			break;
 	    	        		
 	    	        		try {
@@ -111,7 +122,7 @@ public class UpdateStockData {
 	    					}   
 	    	        		
 	    	    		}
-	    	    		if(oldYear[h] == nowYear)
+	    	    		if(year == nowYear)
 	    	    			break;
 	    	    	}  
 	    	    	fw.close();
@@ -120,6 +131,12 @@ public class UpdateStockData {
 	    			// TODO Auto-generated catch block
 	    			e.printStackTrace();
 	    		}
+	            try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	        }         	
 	    }
 	    
@@ -147,7 +164,8 @@ public class UpdateStockData {
 	    	
 	    	for(int i = 0; i < stockNumber.length; i++)
 	    	{
-	    		String str = Integer.toString(oldYear[i]) + "/" + Integer.toString(oldMonth[i]) + "/" + Integer.toString(NowDate[i]);
+	    		
+	    		String str = Integer.toString(NowYear[i]) + "/" + Integer.toString(NowMonth[i]) + "/" + Integer.toString(NowDate[i]);
 	    		fw.write(str + "\r\n");
 	        	fw.flush();
 	    	}

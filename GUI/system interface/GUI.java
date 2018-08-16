@@ -69,7 +69,7 @@ public class GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(255, 204, 204));
+		frame.getContentPane().setBackground(new Color(0, 0, 0));
 		frame.setResizable(false);
 		frame.setTitle("投資秘書");
 		frame.setBounds(100, 100, 1500, 800);
@@ -87,96 +87,96 @@ public class GUI {
 		frame.getContentPane().add(lb2);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setForeground(new Color(255, 102, 51));
-		textArea.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea.setForeground(new Color(255, 215, 0));
+		textArea.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea.setEditable(false);
-		textArea.setBackground(new Color(255, 204, 204));
+		textArea.setBackground(new Color(0, 0, 0));
 		textArea.setText("請輸入預算金額：");
-		textArea.setBounds(855, 440, 160, 30);
+		textArea.setBounds(855, 440, 190, 35);
 		frame.getContentPane().add(textArea);
 		
 		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setForeground(new Color(255, 102, 51));
-		textArea_1.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_1.setForeground(new Color(255, 215, 0));
+		textArea_1.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_1.setEditable(false);
 		textArea_1.setText("請選擇投資起始日期：");
-		textArea_1.setBackground(new Color(255, 204, 204));
-		textArea_1.setBounds(855, 490, 200, 30);
+		textArea_1.setBackground(new Color(0, 0, 0));
+		textArea_1.setBounds(855, 490, 240, 35);
 		frame.getContentPane().add(textArea_1);
 		
 		JTextArea textArea_2 = new JTextArea();
-		textArea_2.setForeground(new Color(255, 102, 51));
-		textArea_2.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_2.setForeground(new Color(255, 215, 0));
+		textArea_2.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_2.setEditable(false);
 		textArea_2.setText("請選擇投資終止日期：");
-		textArea_2.setBackground(new Color(255, 204, 204));
-		textArea_2.setBounds(855, 540, 200, 30);
+		textArea_2.setBackground(new Color(0, 0, 0));
+		textArea_2.setBounds(855, 540, 240, 35);
 		frame.getContentPane().add(textArea_2);
 		
 		budget = new JTextField();
 		budget.setFont(new Font("Monospaced", Font.PLAIN, 20));
 		budget.setHorizontalAlignment(SwingConstants.CENTER);
-		budget.setBounds(1020, 440, 120, 30);
+		budget.setBounds(1040, 440, 120, 35);
 		frame.getContentPane().add(budget);
 		budget.setColumns(10);
 		
 		JTextArea textArea_6 = new JTextArea();
-		textArea_6.setForeground(new Color(255, 102, 51));
+		textArea_6.setForeground(new Color(255, 215, 0));
 		textArea_6.setText("年");
-		textArea_6.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_6.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_6.setEditable(false);
-		textArea_6.setBackground(new Color(255, 204, 204));
-		textArea_6.setBounds(1120, 540, 30, 30);
+		textArea_6.setBackground(new Color(0, 0, 0));
+		textArea_6.setBounds(1145, 540, 30, 35);
 		frame.getContentPane().add(textArea_6);
 		
 		JTextArea textArea_7 = new JTextArea();
-		textArea_7.setForeground(new Color(255, 102, 51));
+		textArea_7.setForeground(new Color(255, 215, 0));
 		textArea_7.setText("月");
-		textArea_7.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_7.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_7.setEditable(false);
-		textArea_7.setBackground(new Color(255, 204, 204));
-		textArea_7.setBounds(1180, 540, 30, 30);
+		textArea_7.setBackground(new Color(0, 0, 0));
+		textArea_7.setBounds(1210, 540, 30, 35);
 		frame.getContentPane().add(textArea_7);
 		
 		JTextArea textArea_8 = new JTextArea();
-		textArea_8.setForeground(new Color(255, 102, 51));
+		textArea_8.setForeground(new Color(255, 215, 0));
 		textArea_8.setText("日");
-		textArea_8.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_8.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_8.setEditable(false);
-		textArea_8.setBackground(new Color(255, 204, 204));
-		textArea_8.setBounds(1245, 540, 30, 30);
+		textArea_8.setBackground(new Color(0, 0, 0));
+		textArea_8.setBounds(1275, 540, 30, 35);
 		frame.getContentPane().add(textArea_8);	
 		
 		JTextArea textArea_9 = new JTextArea();
-		textArea_9.setForeground(new Color(255, 102, 51));
+		textArea_9.setForeground(new Color(255, 215, 0));
 		textArea_9.setText("請輸入停損比率：");
-		textArea_9.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_9.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_9.setEditable(false);
-		textArea_9.setBackground(new Color(255, 204, 204));
-		textArea_9.setBounds(855, 590, 160, 30);
+		textArea_9.setBackground(new Color(0, 0, 0));
+		textArea_9.setBounds(855, 590, 190, 35);
 		frame.getContentPane().add(textArea_9);
 		
 		lose = new JTextField();
 		lose.setFont(new Font("Monospaced", Font.PLAIN, 20));
 		lose.setHorizontalAlignment(SwingConstants.CENTER);
 		lose.setColumns(10);
-		lose.setBounds(1015, 590, 50, 30);
+		lose.setBounds(1045, 590, 50, 35);
 		frame.getContentPane().add(lose);
 		
 		JTextArea textArea_10 = new JTextArea();
-		textArea_10.setForeground(new Color(255, 102, 51));
+		textArea_10.setForeground(new Color(255, 215, 0));
 		textArea_10.setText("請輸入停利比率：");
-		textArea_10.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_10.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_10.setEditable(false);
-		textArea_10.setBackground(new Color(255, 204, 204));
-		textArea_10.setBounds(855, 640, 160, 30);
+		textArea_10.setBackground(new Color(0, 0, 0));
+		textArea_10.setBounds(855, 640, 190, 35);
 		frame.getContentPane().add(textArea_10);
 		
 		win = new JTextField();
 		win.setFont(new Font("Monospaced", Font.PLAIN, 20));
 		win.setHorizontalAlignment(SwingConstants.CENTER);
 		win.setColumns(10);
-		win.setBounds(1015, 640, 50, 30);
+		win.setBounds(1045, 640, 50, 35);
 		frame.getContentPane().add(win);
 		
 		/*JTextArea test = new JTextArea();
@@ -185,58 +185,61 @@ public class GUI {
 		frame.getContentPane().add(test);*/
 		
 		JTextArea error_budget = new JTextArea();
+		error_budget.setForeground(Color.CYAN);
 		error_budget.setEditable(false);
-		error_budget.setBackground(new Color(255, 204, 204));
-		error_budget.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
-		error_budget.setBounds(1300, 440, 120, 30);
+		error_budget.setBackground(new Color(0, 0, 0));
+		error_budget.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
+		error_budget.setBounds(1340, 440, 130, 35);
 		frame.getContentPane().add(error_budget);
 		
 		JTextArea error_lose = new JTextArea();
-		error_lose.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
+		error_lose.setForeground(Color.CYAN);
+		error_lose.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
 		error_lose.setEditable(false);
-		error_lose.setBackground(new Color(255, 204, 204));
-		error_lose.setBounds(1180, 590, 140, 30);
+		error_lose.setBackground(new Color(0, 0, 0));
+		error_lose.setBounds(1220, 590, 150, 35);
 		frame.getContentPane().add(error_lose);
 		
 		JTextArea error_win = new JTextArea();
-		error_win.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
+		error_win.setForeground(Color.CYAN);
+		error_win.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
 		error_win.setEditable(false);
-		error_win.setBackground(new Color(255, 204, 204));
-		error_win.setBounds(1180, 640, 140, 30);
+		error_win.setBackground(new Color(0, 0, 0));
+		error_win.setBounds(1220, 640, 150, 35);
 		
 		
 		
 		
 		frame.getContentPane().add(error_win);
-		sendmessage.setForeground(new Color(153, 204, 255));
-		sendmessage.setBackground(new Color(204, 153, 153));
+		sendmessage.setForeground(new Color(255, 215, 0));
+		sendmessage.setBackground(new Color(0, 0, 0));
 		sendmessage.setFont(new Font("Monospaced", Font.BOLD, 30));
 		sendmessage.setBounds(1300, 720, 120, 40);
 		frame.getContentPane().add(sendmessage);
 		
 		JTextArea textArea_11 = new JTextArea();
-		textArea_11.setForeground(new Color(255, 102, 51));
-		textArea_11.setBackground(new Color(255, 204, 204));
+		textArea_11.setForeground(new Color(255, 215, 0));
+		textArea_11.setBackground(new Color(0, 0, 0));
 		textArea_11.setEditable(false);
-		textArea_11.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_11.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_11.setText("(0~100%)");
-		textArea_11.setBounds(1070, 590, 90, 30);
+		textArea_11.setBounds(1100, 590, 120, 35);
 		frame.getContentPane().add(textArea_11);
 		
 		JTextArea textArea_12 = new JTextArea();
-		textArea_12.setForeground(new Color(255, 102, 51));
+		textArea_12.setForeground(new Color(255, 215, 0));
 		textArea_12.setText("(0~100%)");
-		textArea_12.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_12.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_12.setEditable(false);
-		textArea_12.setBackground(new Color(255, 204, 204));
-		textArea_12.setBounds(1070, 640, 90, 30);
+		textArea_12.setBackground(new Color(0, 0, 0));
+		textArea_12.setBounds(1100, 640, 120, 35);
 		frame.getContentPane().add(textArea_12);
 		
 		JMenuBar stock = new JMenuBar();
 		stock.setForeground(Color.BLACK);
 		stock.setBackground(new Color(255, 255, 255));
 		stock.setFont(new Font("Monospaced", Font.PLAIN, 20));
-		stock.setBounds(985, 690, 50, 30);
+		stock.setBounds(1000, 693, 50, 30);
 		frame.getContentPane().add(stock);
 		
 		JMenu choose_stock = new JMenu("股票");
@@ -294,57 +297,57 @@ public class GUI {
 		choose_stock.add(stock3);
 		
 		JTextArea textArea_3 = new JTextArea();
-		textArea_3.setForeground(new Color(255, 102, 51));
+		textArea_3.setForeground(new Color(255, 215, 0));
 		textArea_3.setText("年");
-		textArea_3.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_3.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_3.setEditable(false);
-		textArea_3.setBackground(new Color(255, 204, 204));
-		textArea_3.setBounds(1120, 490, 30, 30);
+		textArea_3.setBackground(new Color(0, 0, 0));
+		textArea_3.setBounds(1145, 490, 30, 30);
 		frame.getContentPane().add(textArea_3);
 		
 		JTextArea textArea_4 = new JTextArea();
-		textArea_4.setForeground(new Color(255, 102, 51));
+		textArea_4.setForeground(new Color(255, 215, 0));
 		textArea_4.setText("月");
-		textArea_4.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_4.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_4.setEditable(false);
-		textArea_4.setBackground(new Color(255, 204, 204));
-		textArea_4.setBounds(1180, 490, 30, 30);
+		textArea_4.setBackground(new Color(0, 0, 0));
+		textArea_4.setBounds(1210, 490, 30, 30);
 		frame.getContentPane().add(textArea_4);
 		
 		JTextArea textArea_5 = new JTextArea();
-		textArea_5.setForeground(new Color(255, 102, 51));
+		textArea_5.setForeground(new Color(255, 215, 0));
 		textArea_5.setText("日");
-		textArea_5.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_5.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_5.setEditable(false);
-		textArea_5.setBackground(new Color(255, 204, 204));
-		textArea_5.setBounds(1245, 490, 30, 30);
+		textArea_5.setBackground(new Color(0, 0, 0));
+		textArea_5.setBounds(1275, 490, 30, 35);
 		frame.getContentPane().add(textArea_5);
 		
 		JTextArea s_year = new JTextArea();
-		s_year.setForeground(new Color(255, 102, 0));
-		s_year.setBackground(new Color(255, 204, 204));
+		s_year.setForeground(new Color(255, 215, 0));
+		s_year.setBackground(new Color(0, 0, 0));
 		s_year.setToolTipText("");
 		s_year.setFont(new Font("Monospaced", Font.PLAIN, 20));
 		s_year.setEditable(false);
-		s_year.setBounds(1065, 490, 60, 30);
+		s_year.setBounds(1095, 493, 60, 35);
 		frame.getContentPane().add(s_year);
 		
 		JTextArea textArea_13 = new JTextArea();
-		textArea_13.setForeground(new Color(255, 102, 51));
+		textArea_13.setForeground(new Color(255, 215, 0));
 		textArea_13.setText("(10萬~1000萬)");
-		textArea_13.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_13.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_13.setEditable(false);
-		textArea_13.setBackground(new Color(255, 204, 204));
-		textArea_13.setBounds(1145, 440, 145, 30);
+		textArea_13.setBackground(new Color(0, 0, 0));
+		textArea_13.setBounds(1165, 440, 170, 35);
 		frame.getContentPane().add(textArea_13);
 		
 		JTextArea e_year = new JTextArea();
-		e_year.setForeground(new Color(255, 102, 0));
-		e_year.setBackground(new Color(255, 204, 204));
+		e_year.setForeground(new Color(255, 215, 0));
+		e_year.setBackground(new Color(0, 0, 0));
 		e_year.setToolTipText("");
 		e_year.setFont(new Font("Monospaced", Font.PLAIN, 20));
 		e_year.setEditable(false);
-		e_year.setBounds(1065, 540, 60, 30);
+		e_year.setBounds(1095, 543, 60, 35);
 		frame.getContentPane().add(e_year);
 		
 		/////////////////////////////////////////////////////////
@@ -356,7 +359,7 @@ public class GUI {
 		JMenuBar start_m = new JMenuBar();
 		start_m.setBackground(new Color(255, 255, 255));
 		start_m.setFont(new Font("Monospaced", Font.PLAIN, 20));
-		start_m.setBounds(1145, 490, 30, 30);
+		start_m.setBounds(1175, 493, 30, 30);
 		frame.getContentPane().add(start_m);
 		
 		JMenu chooseSTARTmonth = new JMenu("幾");
@@ -414,7 +417,7 @@ public class GUI {
 		end_m.setBackground(new Color(255, 255, 255));
 		end_m.setForeground(Color.BLACK);
 		end_m.setFont(new Font("Monospaced", Font.PLAIN, 20));
-		end_m.setBounds(1145, 540, 30, 30);
+		end_m.setBounds(1175, 543, 30, 30);
 		frame.getContentPane().add(end_m);
 		
 		JMenu chooseENDmonth = new JMenu("幾");
@@ -470,49 +473,52 @@ public class GUI {
 		chooseENDmonth.add(e_twelve);
 		
 		JTextArea textArea_14 = new JTextArea();
-		textArea_14.setForeground(new Color(255, 102, 51));
+		textArea_14.setForeground(new Color(255, 215, 0));
 		textArea_14.setText("請選擇股票：");
-		textArea_14.setFont(new Font("Monospaced", Font.PLAIN, 20));
+		textArea_14.setFont(new Font("微軟正黑體", Font.PLAIN, 24));
 		textArea_14.setEditable(false);
-		textArea_14.setBackground(new Color(255, 204, 204));
-		textArea_14.setBounds(855, 690, 120, 30);
+		textArea_14.setBackground(new Color(0, 0, 0));
+		textArea_14.setBounds(855, 690, 140, 35);
 		frame.getContentPane().add(textArea_14);
 		
 		JTextArea error_stock = new JTextArea();
-		error_stock.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
+		error_stock.setForeground(Color.CYAN);
+		error_stock.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
 		error_stock.setEditable(false);
-		error_stock.setBackground(new Color(255, 204, 204));
-		error_stock.setBounds(1045, 690, 85, 30);
+		error_stock.setBackground(new Color(0, 0, 0));
+		error_stock.setBounds(1060, 690, 130, 35);
 		frame.getContentPane().add(error_stock);
 		
 		JTextArea error_start = new JTextArea();
-		error_start.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
+		error_start.setForeground(Color.CYAN);
+		error_start.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
 		error_start.setEditable(false);
-		error_start.setBackground(new Color(255, 204, 204));
-		error_start.setBounds(1280, 490, 160, 30);
+		error_start.setBackground(new Color(0, 0, 0));
+		error_start.setBounds(1305, 490, 130, 35);
 		frame.getContentPane().add(error_start);
 		
 		JTextArea error_end = new JTextArea();
-		error_end.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 20));
+		error_end.setForeground(Color.CYAN);
+		error_end.setFont(new Font("微軟正黑體", Font.BOLD | Font.ITALIC, 24));
 		error_end.setEditable(false);
-		error_end.setBackground(new Color(255, 204, 204));
-		error_end.setBounds(1280, 540, 160, 30);
+		error_end.setBackground(new Color(0, 0, 0));
+		error_end.setBounds(1305, 540, 130, 35);
 		frame.getContentPane().add(error_end);
 		
 		JTextArea na = new JTextArea();
-		na.setForeground(new Color(255, 102, 51));
-		na.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 40));
+		na.setForeground(new Color(255, 215, 0));
+		na.setFont(new Font("微軟正黑體", Font.PLAIN, 50));
 		na.setEditable(false);
-		na.setBackground(new Color(255, 204, 204));
-		na.setBounds(10, 30, 305, 60);
+		na.setBackground(new Color(0, 0, 0));
+		na.setBounds(10, 30, 355, 60);
 		frame.getContentPane().add(na);
 		
 		JTextArea na2 = new JTextArea();
-		na2.setForeground(new Color(255, 102, 51));
-		na2.setFont(new Font("Monospaced", Font.BOLD | Font.ITALIC, 40));
+		na2.setForeground(new Color(255, 215, 0));
+		na2.setFont(new Font("微軟正黑體", Font.PLAIN, 50));
 		na2.setEditable(false);
-		na2.setBackground(new Color(255, 204, 204));
-		na2.setBounds(855, 30, 305, 60);
+		na2.setBackground(new Color(0, 0, 0));
+		na2.setBounds(855, 30, 355, 60);
 		frame.getContentPane().add(na2);
 		
 		
@@ -530,7 +536,7 @@ public class GUI {
 		JMenuBar m1 = new JMenuBar();
 		m1.setBackground(new Color(255, 255, 255));
 		m1.setFont(new Font("Monospaced", Font.PLAIN, 20));
-		m1.setBounds(1210, 490, 30, 30);
+		m1.setBounds(1240, 493, 30, 30);
 		frame.getContentPane().add(m1);
 		mon1.setForeground(Color.BLUE);
 		mon1.setBackground(new Color(255, 255, 255));
@@ -563,7 +569,7 @@ public class GUI {
 		JMenuBar m2 = new JMenuBar();
 		m2.setBackground(new Color(255, 255, 255));
 		m2.setFont(new Font("Monospaced", Font.PLAIN, 20));
-		m2.setBounds(1210, 540, 30, 30);
+		m2.setBounds(1240, 543, 30, 30);
 		frame.getContentPane().add(m2);
 		mon2.setForeground(Color.BLUE);
 		mon2.setBackground(new Color(255, 255, 255));
