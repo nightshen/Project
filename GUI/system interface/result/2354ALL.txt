@@ -1,0 +1,33 @@
+2013/04/17  buy_price:   78.3   |            st: 6 m: 1532
+2013/07/19  sell_price:   74.1   |            st: 3 m: 1754
+2013/08/14  sell_price:   78.2   |            st: 2 m: 1832
+2013/10/18  buy_price:   74.6   |            st: 8 m: 1382
+2014/04/16  sell_price:   75.7   |            st: 4 m: 1684
+2014/05/23  buy_price:   69.8   |            st: 10 m: 1264
+2014/11/05  sell_price:   81.6   |            st: 5 m: 1672
+2015/01/09  buy_price:   86.9   |            st: 9 m: 1324
+2015/01/22  buy_price:   85.2   |            st: 12 m: 1069
+2015/02/13  buy_price:   80.4   |            st: 15 m: 829
+2015/06/01  sell_price:   106.5   |            st: 8 m: 1574
+2015/10/26  buy_price:   89.9   |            st: 12 m: 1214
+2015/11/23  buy_price:   76.3   |            st: 15 m: 986
+2016/03/11  sell_price:   71.0   |            st: 8 m: 1483
+2016/05/09  buy_price:   64.3   |            st: 13 m: 1163
+2016/06/02  sell_price:   73.8   |            st: 7 m: 1605
+2016/07/25  sell_price:   77.6   |            st: 4 m: 1837
+2016/08/17  sell_price:   83.5   |            st: 2 m: 2004
+2016/10/03  sell_price:   91.2   |            st: 1 m: 2095
+2016/10/26  sell_price:   93.1   |            st: 0 m: 2188
+2017/02/16  sell_price:   95.3   |            st: 0 m: 2188
+2017/05/25  buy_price:   87.8   |            st: 6 m: 1660
+2017/06/29  sell_price:   92.8   |            st: 3 m: 1938
+2017/09/30  buy_price:   88.5   |            st: 8 m: 1493
+2018/01/22  sell_price:   86.9   |            st: 4 m: 1840
+2018/03/15  sell_price:   79.6   |            st: 2 m: 1999
+2018/04/25  buy_price:   74.9   |            st: 8 m: 1549
+2018/07/25  sell_price:   75.8   |            st: 4 m: 1852
+2018/08/30  sell_price:   77.9   |            st: 2 m: 2007
+
+stock you have: 2
+my_money (didn't sell): 2007
+2018/09/07 total money (sell the stock): 2157

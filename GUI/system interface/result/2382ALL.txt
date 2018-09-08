@@ -1,0 +1,36 @@
+2013/05/30  sell_price:   64.7   |            st: 0 m: 2000
+2013/06/17  buy_price:   62.2   |            st: 8 m: 1504
+2013/07/09  sell_price:   65.1   |            st: 4 m: 1764
+2013/09/10  sell_price:   67.0   |            st: 2 m: 1898
+2013/10/23  sell_price:   67.8   |            st: 1 m: 1965
+2013/12/12  sell_price:   66.7   |            st: 0 m: 2031
+2014/01/03  sell_price:   67.8   |            st: 0 m: 2031
+2014/01/21  sell_price:   76.9   |            st: 0 m: 2031
+2014/03/31  sell_price:   82.0   |            st: 0 m: 2031
+2015/03/19  buy_price:   78.0   |            st: 6 m: 1563
+2015/04/27  sell_price:   78.8   |            st: 3 m: 1799
+2015/06/22  buy_price:   71.5   |            st: 9 m: 1367
+2015/08/04  buy_price:   62.0   |            st: 14 m: 1057
+2016/03/22  sell_price:   59.1   |            st: 7 m: 1470
+2016/04/27  buy_price:   55.5   |            st: 13 m: 1134
+2016/05/20  sell_price:   54.7   |            st: 7 m: 1462
+2016/06/24  sell_price:   59.2   |            st: 4 m: 1639
+2016/07/22  sell_price:   65.8   |            st: 2 m: 1770
+2016/08/10  buy_price:   59.0   |            st: 9 m: 1357
+2016/08/22  sell_price:   60.0   |            st: 5 m: 1597
+2016/09/30  sell_price:   65.4   |            st: 3 m: 1727
+2017/01/18  sell_price:   63.5   |            st: 2 m: 1790
+2017/03/09  sell_price:   63.8   |            st: 1 m: 1853
+2017/07/26  sell_price:   77.1   |            st: 0 m: 1930
+2017/08/23  buy_price:   69.1   |            st: 6 m: 1516
+2017/09/22  sell_price:   70.8   |            st: 3 m: 1728
+2017/12/08  buy_price:   59.8   |            st: 10 m: 1308
+2018/01/24  sell_price:   64.2   |            st: 5 m: 1629
+2018/05/10  buy_price:   52.9   |            st: 12 m: 1258
+2018/05/24  sell_price:   53.5   |            st: 6 m: 1579
+2018/07/09  buy_price:   52.2   |            st: 13 m: 1215
+2018/07/27  sell_price:   55.6   |            st: 7 m: 1548
+
+stock you have: 7
+my_money (didn't sell): 1548
+2018/09/07 total money (sell the stock): 1898

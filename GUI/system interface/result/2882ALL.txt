@@ -1,0 +1,36 @@
+2013/05/06  sell_price:   39.65   |            st: 0 m: 2000
+2013/06/05  buy_price:   39.3   |            st: 12 m: 1532
+2013/06/25  sell_price:   40.0   |            st: 6 m: 1772
+2013/07/19  sell_price:   42.75   |            st: 3 m: 1900
+2013/10/31  sell_price:   44.3   |            st: 2 m: 1944
+2013/11/29  sell_price:   46.5   |            st: 1 m: 1990
+2014/01/03  sell_price:   48.7   |            st: 0 m: 2038
+2014/03/07  buy_price:   44.65   |            st: 11 m: 1543
+2014/03/25  buy_price:   44.3   |            st: 19 m: 1191
+2014/08/08  buy_price:   48.3   |            st: 25 m: 903
+2014/08/29  sell_price:   51.0   |            st: 13 m: 1515
+2014/10/03  buy_price:   50.0   |            st: 20 m: 1165
+2014/12/11  buy_price:   46.3   |            st: 26 m: 889
+2014/12/22  buy_price:   46.15   |            st: 30 m: 705
+2015/01/06  sell_price:   44.95   |            st: 15 m: 1379
+2015/07/13  buy_price:   52.0   |            st: 21 m: 1067
+2016/07/06  buy_price:   34.1   |            st: 28 m: 829
+2016/08/19  sell_price:   37.5   |            st: 14 m: 1354
+2016/10/03  sell_price:   40.05   |            st: 7 m: 1634
+2017/01/13  sell_price:   48.4   |            st: 4 m: 1779
+2017/01/24  buy_price:   47.5   |            st: 13 m: 1347
+2017/04/13  buy_price:   47.95   |            st: 20 m: 1011
+2017/06/03  buy_price:   47.55   |            st: 25 m: 771
+2017/09/01  sell_price:   48.95   |            st: 13 m: 1358
+2017/10/18  sell_price:   49.15   |            st: 7 m: 1652
+2018/01/10  sell_price:   55.6   |            st: 4 m: 1818
+2018/05/03  sell_price:   52.9   |            st: 2 m: 1923
+2018/06/04  buy_price:   54.0   |            st: 10 m: 1491
+2018/06/14  sell_price:   54.5   |            st: 5 m: 1763
+2018/07/09  buy_price:   51.7   |            st: 13 m: 1347
+2018/08/09  sell_price:   52.7   |            st: 7 m: 1663
+2018/08/22  buy_price:   52.1   |            st: 14 m: 1299
+
+stock you have: 14
+my_money (didn't sell): 1299
+2018/09/07 total money (sell the stock): 2015

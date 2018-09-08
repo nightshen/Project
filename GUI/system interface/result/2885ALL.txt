@@ -1,0 +1,47 @@
+2013/03/26  buy_price:   14.95   |            st: 33 m: 1505
+2013/04/18  buy_price:   14.3   |            st: 59 m: 1141
+2013/05/06  sell_price:   14.9   |            st: 30 m: 1573
+2013/05/13  sell_price:   15.3   |            st: 15 m: 1802
+2013/06/18  buy_price:   15.5   |            st: 44 m: 1354
+2013/07/19  sell_price:   15.9   |            st: 22 m: 1703
+2013/09/10  sell_price:   15.1   |            st: 11 m: 1869
+2013/11/13  buy_price:   15.5   |            st: 41 m: 1405
+2013/12/05  sell_price:   16.05   |            st: 21 m: 1726
+2014/01/02  sell_price:   17.7   |            st: 11 m: 1903
+2014/03/13  buy_price:   15.3   |            st: 42 m: 1438
+2014/04/15  sell_price:   15.5   |            st: 21 m: 1763
+2014/06/17  sell_price:   16.25   |            st: 11 m: 1925
+2014/07/17  sell_price:   16.4   |            st: 6 m: 2007
+2014/10/21  buy_price:   14.9   |            st: 39 m: 1512
+2015/06/01  sell_price:   17.7   |            st: 20 m: 1848
+2015/06/12  buy_price:   16.95   |            st: 47 m: 1389
+2015/06/29  sell_price:   16.45   |            st: 24 m: 1767
+2015/07/30  buy_price:   15.1   |            st: 53 m: 1332
+2015/10/21  sell_price:   13.0   |            st: 27 m: 1670
+2015/12/02  buy_price:   12.55   |            st: 60 m: 1254
+2016/01/19  buy_price:   10.25   |            st: 90 m: 944
+2016/05/16  buy_price:   10.2   |            st: 113 m: 714
+2016/06/02  sell_price:   10.75   |            st: 57 m: 1316
+2016/08/17  sell_price:   11.75   |            st: 29 m: 1645
+2016/09/06  buy_price:   11.4   |            st: 65 m: 1238
+2016/11/02  sell_price:   11.65   |            st: 33 m: 1610
+2017/01/16  sell_price:   12.3   |            st: 17 m: 1806
+2017/02/16  sell_price:   13.0   |            st: 9 m: 1910
+2017/03/13  buy_price:   12.9   |            st: 45 m: 1442
+2017/03/22  sell_price:   13.1   |            st: 23 m: 1730
+2017/04/21  buy_price:   12.7   |            st: 57 m: 1301
+2017/05/09  sell_price:   12.95   |            st: 29 m: 1663
+2017/06/06  sell_price:   13.15   |            st: 15 m: 1847
+2017/07/26  buy_price:   12.95   |            st: 50 m: 1392
+2017/10/18  sell_price:   13.15   |            st: 25 m: 1720
+2017/11/27  sell_price:   13.75   |            st: 13 m: 1885
+2018/01/10  sell_price:   13.95   |            st: 7 m: 1968
+2018/03/20  sell_price:   13.4   |            st: 4 m: 2008
+2018/05/04  sell_price:   14.15   |            st: 2 m: 2036
+2018/07/10  buy_price:   13.25   |            st: 40 m: 1529
+2018/08/02  sell_price:   13.8   |            st: 20 m: 1805
+2018/08/13  sell_price:   14.9   |            st: 10 m: 1954
+
+stock you have: 10
+my_money (didn't sell): 1954
+2018/09/07 total money (sell the stock): 2104

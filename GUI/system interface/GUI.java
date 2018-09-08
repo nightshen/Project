@@ -62,6 +62,8 @@ public class GUI {
 		initialize();
 		UpdateStockData up = new UpdateStockData();
 		up.DownloadStockData();
+		CalculateResult cal = new CalculateResult();
+		cal.Calculate();
 	}
 
 	/**
